@@ -353,20 +353,3 @@ class Empresa:
         for vendedor in self.fucionarios:
             if isinstance(vendedor, Vendedor):
                 vendedor.zerar_visitas()
-        
-if __name__ == "__main__":
-    
-    
-    vend = Vendedor('castro', 28, 'castro@empresa.com', 35)
-    vend2 = Vendedor('alisson', 28, 'alisson@empresa.com', 35)
-    emp = Empresa('ACME', 123456789, 'Tecnologia', [])
-    emp.contrata(vend)
-    emp.contrata(vend2)
-    vend.realizar_visita(1)
-    vend.realizar_visita(3)
-    vend.realizar_visita(6)
-    vend2.realizar_visita(5)
-    v = emp.listar_visitas()
-    emp.zerar_visitas_vendedores()
-    
-
